@@ -1,15 +1,19 @@
 import { Link } from "react-router-dom";
-import {BicameraMovie, BiSearchAlt2} from "react-icons/bi"
+import {BiCameraMovie, BiSearchAlt2} from "react-icons/bi"
 
 const Navbar = () =>{
     return(
     <nav id="navbar">
         <h2>
-          <Link to="/">MoviesLib</Link>
+          <Link to="/">
+            <BiCameraMovie/>  MoviesLib
+          </Link>
         </h2>
         <form>
           <input type="text" placeholder="Busca filmes" />
-          <button type="submit"></button>
+          <button type="submit">
+            <BiSearchAlt2/>
+          </button>
         </form>
     </nav>
     )
