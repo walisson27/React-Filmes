@@ -5,13 +5,14 @@ import "../components/Navbar.css"
 
 const Navbar = () =>{
   const [search, setSearch] = useState("")
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if(!search) return;
+    if(!search) return
 
-    navigate(`/search?=${search}`);
+    navigate(`/search?q=${search}`);
     setSearch("");
   }
     return(
@@ -24,14 +25,13 @@ const Navbar = () =>{
         <form onSubmit={handleSubmit}>
           <input type="text" placeholder="Busca filmes"
           onChange={(e) => setSearch(e.target.value)}
-          value={search} 
-          />
+          value={search} />
           <button type="submit">
             <BiSearchAlt2/>
           </button>
         </form>
     </nav>
-    )
+    );
 }
 
 export default Navbar;
