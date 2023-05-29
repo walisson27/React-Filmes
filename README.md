@@ -3,7 +3,7 @@
 </h1>
 
 <h4 align="center">
-  🚀 Desenvolvido com Reactjs
+  🚀Em Desenvolvimento.....
 </h4>
 
 <p align="center">
