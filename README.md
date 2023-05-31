@@ -18,7 +18,7 @@
 Esse projeto está sendo desenvolvido com as seguintes tecnologias:
 
 - ReactJs
-
+- Api Rest
 <br>
 
 ## 💻 Instalação
