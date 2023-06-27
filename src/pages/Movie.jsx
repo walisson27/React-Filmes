@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import {
-    BsGraphup,
+    BsGraphUp,
     BsWallet2,
     BsHourglassSplit,
     BsFillFileEarmarkTextFill
@@ -23,22 +23,43 @@ const Movie =()=>{
     setMovie(data);
   }
 
+  
+
   useEffect(() => {
-    const movieUrL = `${moviesURl}${id}?${apiKey}`;
+    const movieUrL = `${movieURL}${id}?${apiKey}`;
     getMovie(movieUrL)
   },[]);
-  
+
  return(
     <div className="movie-page">
             {movie && (
                 <>
                 <MovieCard movie={movie} showLink={false} />
                 <p className="tagline">{movie.tagline}</p>
-                <dir className="info">
+                <div className="info">
                     <h3>
-                        <BsWallet2/>
+                        <BsGraphUp/> Orçamento:
                     </h3>
-                </dir>
+                    <p>{movie.budget}</p>
+                </div>
+                <div className="info">
+                    <h3>
+                        <BsWallet2/> Receita:
+                    </h3>
+                    <p>{movie.revenue}</p>
+                </div>
+                <div className="info">
+                    <h3>
+                        <BsHourglassSplit/> Duração:
+                    </h3>
+                    <p>{movie.runtime} minutos</p>
+                </div>
+                <div className="info description">
+                    <h3>
+                        <BsFillFileEarmarkTextFill/> Descrição:
+                    </h3>
+                    <p>{movie.overview}</p>
+                </div>
                 </>
             )}
         </div>
